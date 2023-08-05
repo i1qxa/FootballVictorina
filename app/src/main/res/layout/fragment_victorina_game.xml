@@ -1,76 +1,137 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".VictorinaGameFragment">
+    tools:context=".game.VictorinaGameFragment">
 
     <ImageView
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:id="@+id/imageView"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:src="@drawable/stadium_background_2"
         android:scaleType="centerCrop"
-        />
+        android:src="@drawable/stadium_background_2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/tvBalanceGame"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginEnd="@dimen/_15dp"
         android:layout_marginTop="@dimen/_15dp"
-        android:drawableStart="@drawable/coin30x30"
-        android:text="1000"
-        android:textSize="26sp"
-        android:textColor="@color/white"
+        android:layout_marginEnd="@dimen/_15dp"
         android:background="@drawable/ramka"
+        android:drawableStart="@drawable/coin30x30"
         android:gravity="center_vertical"
         android:padding="5dp"
+        android:text="1000"
+        android:textColor="@color/white"
+        android:textSize="26sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imagePlayer1"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+
+        app:layout_constraintBottom_toTopOf="@id/imagePlayer3"
+        app:layout_constraintEnd_toEndOf="@id/imagePlayer3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvBalanceGame"
+        app:srcCompat="@drawable/feller_club_ramka" />
+
+    <ImageView
+        android:id="@+id/imagePlayer2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:src="@drawable/gerd_muller_club_ramka"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvBalanceGame"
+        app:layout_constraintStart_toStartOf="@id/imagePlayer4"
+        app:layout_constraintBottom_toTopOf="@id/imagePlayer4"
+
+         />
+
+    <ImageView
+        android:id="@+id/imagePlayer3"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:src="@drawable/oliver_kahn_club_ramka"
+        app:layout_constraintBottom_toTopOf="@id/tvCountRightAnswers"
+        app:layout_constraintEnd_toStartOf="@id/imagePlayer4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imagePlayer1"
+        />
+
+    <ImageView
+        android:id="@+id/imagePlayer4"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:src="@drawable/sweinsteiger_club_ramka"
+        app:layout_constraintBottom_toTopOf="@id/tvCountRightAnswers"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/imagePlayer3"
+        app:layout_constraintTop_toBottomOf="@id/imagePlayer2"
+        />
+
+    <TextView
+        android:id="@+id/tvCountRightAnswers"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/ramka"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:textSize="26sp"
+        android:gravity="center"
+        android:text="Count of right Answers: 0/2"
+        android:paddingHorizontal="15dp"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/tvQuestion"
+
         />
 
     <LinearLayout
         android:id="@+id/llBet"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
         android:layout_marginBottom="40dp"
-        android:orientation="horizontal"
         android:background="@drawable/ramka"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
         android:paddingStart="10dp"
         android:paddingEnd="10dp"
-        android:gravity="center_vertical"
-        >
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
         <ImageView
             android:id="@+id/btnDecreaseBet"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/minus_icon"
-            />
+            android:src="@drawable/minus_icon" />
+
         <TextView
             android:id="@+id/tvBet"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="60"
-            android:textSize="26sp"
-            android:textColor="@color/white"
             android:layout_marginStart="10dp"
             android:layout_marginEnd="10dp"
             android:drawableStart="@drawable/coin30x30"
-            />
+            android:text="60"
+            android:textColor="@color/white"
+            android:textSize="26sp" />
+
         <ImageView
             android:id="@+id/btnIncreaseBet"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/plus_icon"
-            />
+            android:src="@drawable/plus_icon" />
 
     </LinearLayout>
 
@@ -78,19 +139,74 @@
         android:id="@+id/tvQuestion"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toTopOf="@id/llBet"
         android:layout_marginBottom="20dp"
+        android:layout_marginHorizontal="10dp"
+        android:background="@drawable/ramka"
+        android:gravity="center"
+        android:padding="5dp"
+        android:text="@string/question_germany"
         android:textColor="@color/white"
         android:textSize="26sp"
+        app:layout_constraintBottom_toTopOf="@id/llBet"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/tvPlayer1Name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/imagePlayer1"
+        app:layout_constraintEnd_toEndOf="@id/imagePlayer1"
+        app:layout_constraintBottom_toBottomOf="@id/imagePlayer1"
+        android:layout_marginBottom="5dp"
+        android:textColor="@color/white"
+        android:textSize="20sp"
         android:background="@drawable/ramka"
-        android:text="@string/question_germany"
-        android:padding="5dp"
-        android:gravity="center"
+        android:paddingHorizontal="5dp"
+        android:visibility="gone"
         />
-
-
+    <TextView
+        android:id="@+id/tvPlayer2Name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/imagePlayer2"
+        app:layout_constraintEnd_toEndOf="@id/imagePlayer2"
+        app:layout_constraintBottom_toBottomOf="@id/imagePlayer2"
+        android:layout_marginBottom="5dp"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:background="@drawable/ramka"
+        android:paddingHorizontal="5dp"
+        android:visibility="gone"
+        />
+    <TextView
+        android:id="@+id/tvPlayer3Name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/imagePlayer3"
+        app:layout_constraintEnd_toEndOf="@id/imagePlayer3"
+        app:layout_constraintBottom_toBottomOf="@id/imagePlayer3"
+        android:layout_marginBottom="5dp"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:background="@drawable/ramka"
+        android:paddingHorizontal="5dp"
+        android:visibility="gone"
+        />
+    <TextView
+        android:id="@+id/tvPlayer4Name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/imagePlayer4"
+        app:layout_constraintEnd_toEndOf="@id/imagePlayer4"
+        app:layout_constraintBottom_toBottomOf="@id/imagePlayer4"
+        android:layout_marginBottom="5dp"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:background="@drawable/ramka"
+        android:paddingHorizontal="5dp"
+        android:visibility="gone"
+        />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
