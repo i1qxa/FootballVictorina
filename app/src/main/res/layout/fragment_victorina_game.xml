@@ -37,62 +37,53 @@
         android:id="@+id/imagePlayer1"
         android:layout_width="0dp"
         android:layout_height="0dp"
-
         app:layout_constraintBottom_toTopOf="@id/imagePlayer3"
         app:layout_constraintEnd_toEndOf="@id/imagePlayer3"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tvBalanceGame"
-        app:srcCompat="@drawable/feller_club_ramka" />
+        app:layout_constraintTop_toBottomOf="@id/tvBalanceGame" />
 
     <ImageView
         android:id="@+id/imagePlayer2"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:src="@drawable/gerd_muller_club_ramka"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tvBalanceGame"
-        app:layout_constraintStart_toStartOf="@id/imagePlayer4"
         app:layout_constraintBottom_toTopOf="@id/imagePlayer4"
-
-         />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/imagePlayer4"
+        app:layout_constraintTop_toBottomOf="@id/tvBalanceGame" />
 
     <ImageView
         android:id="@+id/imagePlayer3"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:src="@drawable/oliver_kahn_club_ramka"
         app:layout_constraintBottom_toTopOf="@id/tvCountRightAnswers"
         app:layout_constraintEnd_toStartOf="@id/imagePlayer4"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/imagePlayer1"
-        />
+        app:layout_constraintTop_toBottomOf="@id/imagePlayer1" />
 
     <ImageView
         android:id="@+id/imagePlayer4"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:src="@drawable/sweinsteiger_club_ramka"
         app:layout_constraintBottom_toTopOf="@id/tvCountRightAnswers"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/imagePlayer3"
-        app:layout_constraintTop_toBottomOf="@id/imagePlayer2"
-        />
+        app:layout_constraintTop_toBottomOf="@id/imagePlayer2" />
 
     <TextView
         android:id="@+id/tvCountRightAnswers"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@drawable/ramka"
-        android:textColor="@color/white"
-        android:textStyle="bold"
-        android:textSize="26sp"
-        android:gravity="center"
-        android:text="Count of right Answers: 0/2"
-        android:paddingHorizontal="15dp"
         android:layout_marginBottom="10dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:background="@drawable/ramka"
+        android:gravity="center"
+        android:paddingHorizontal="15dp"
+        android:text="Count of right Answers: 0/2"
+        android:textColor="@color/white"
+        android:textSize="26sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@id/tvQuestion"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
 
         />
 
@@ -139,8 +130,8 @@
         android:id="@+id/tvQuestion"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="20dp"
         android:layout_marginHorizontal="10dp"
+        android:layout_marginBottom="20dp"
         android:background="@drawable/ramka"
         android:gravity="center"
         android:padding="5dp"
@@ -155,58 +146,57 @@
         android:id="@+id/tvPlayer1Name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintStart_toStartOf="@id/imagePlayer1"
-        app:layout_constraintEnd_toEndOf="@id/imagePlayer1"
-        app:layout_constraintBottom_toBottomOf="@id/imagePlayer1"
         android:layout_marginBottom="5dp"
-        android:textColor="@color/white"
-        android:textSize="20sp"
         android:background="@drawable/ramka"
         android:paddingHorizontal="5dp"
+        android:textColor="@color/white"
+        android:textSize="20sp"
         android:visibility="gone"
-        />
+        app:layout_constraintBottom_toBottomOf="@id/imagePlayer1"
+        app:layout_constraintEnd_toEndOf="@id/imagePlayer1"
+        app:layout_constraintStart_toStartOf="@id/imagePlayer1" />
+
     <TextView
         android:id="@+id/tvPlayer2Name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintStart_toStartOf="@id/imagePlayer2"
-        app:layout_constraintEnd_toEndOf="@id/imagePlayer2"
-        app:layout_constraintBottom_toBottomOf="@id/imagePlayer2"
         android:layout_marginBottom="5dp"
-        android:textColor="@color/white"
-        android:textSize="20sp"
         android:background="@drawable/ramka"
         android:paddingHorizontal="5dp"
+        android:textColor="@color/white"
+        android:textSize="20sp"
         android:visibility="gone"
-        />
+        app:layout_constraintBottom_toBottomOf="@id/imagePlayer2"
+        app:layout_constraintEnd_toEndOf="@id/imagePlayer2"
+        app:layout_constraintStart_toStartOf="@id/imagePlayer2" />
+
     <TextView
         android:id="@+id/tvPlayer3Name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintStart_toStartOf="@id/imagePlayer3"
-        app:layout_constraintEnd_toEndOf="@id/imagePlayer3"
-        app:layout_constraintBottom_toBottomOf="@id/imagePlayer3"
         android:layout_marginBottom="5dp"
-        android:textColor="@color/white"
-        android:textSize="20sp"
         android:background="@drawable/ramka"
         android:paddingHorizontal="5dp"
+        android:textColor="@color/white"
+        android:textSize="20sp"
         android:visibility="gone"
-        />
+        app:layout_constraintBottom_toBottomOf="@id/imagePlayer3"
+        app:layout_constraintEnd_toEndOf="@id/imagePlayer3"
+        app:layout_constraintStart_toStartOf="@id/imagePlayer3" />
+
     <TextView
         android:id="@+id/tvPlayer4Name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintStart_toStartOf="@id/imagePlayer4"
-        app:layout_constraintEnd_toEndOf="@id/imagePlayer4"
-        app:layout_constraintBottom_toBottomOf="@id/imagePlayer4"
         android:layout_marginBottom="5dp"
-        android:textColor="@color/white"
-        android:textSize="20sp"
         android:background="@drawable/ramka"
         android:paddingHorizontal="5dp"
+        android:textColor="@color/white"
+        android:textSize="20sp"
         android:visibility="gone"
-        />
+        app:layout_constraintBottom_toBottomOf="@id/imagePlayer4"
+        app:layout_constraintEnd_toEndOf="@id/imagePlayer4"
+        app:layout_constraintStart_toStartOf="@id/imagePlayer4" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
